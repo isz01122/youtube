@@ -1,7 +1,7 @@
 .header {
   display: flex;
-  height: 4rem;
-  padding: 0.8em 1em;
+  height: 3rem;
+  padding: 0.4em 1em;
   background-color: black;
   color: white;
   position: sticky;
@@ -13,6 +13,14 @@
   display: flex;
   align-items: center;
   margin-right: 1em;
+  text-decoration: none;
+}
+
+.img {
+  height: 100%;
+}
+.title {
+  color: white;
 }
 
 .input {
@@ -21,12 +29,26 @@
   outline: 0;
 }
 .button {
-  background-color: darkgray;
+  background-color: transparent;
   outline: 0;
+  border: 0;
   background-color: transprant;
   cursor: pointer;
+  width: 3rem;
 }
 .buttonImg {
   height: 100%;
   padding: 0.5em 0.2em;
+}
+
+@media screen and (max-width: 48rem) {
+  .title {
+    display: none;
+  }
+  .logo {
+    margin-right: 0.5em;
+  }
+  .input {
+    font-size: 1rem;
+  }
 }
