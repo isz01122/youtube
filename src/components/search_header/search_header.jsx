@@ -6,7 +6,7 @@ const SearchHeader = memo(({ onSearch }) => {
 
   const handleSearch = () => {
     const value = inputRef.current.value;
-    onSearch(value);
+    if (value !== "") onSearch(value);
   };
 
   const onClick = () => {
@@ -20,8 +20,8 @@ const SearchHeader = memo(({ onSearch }) => {
   };
   return (
     <header className={styles.header}>
-      <a href="" className={styles.logo}>
-        <img className={styles.img} src="/images/logo.png" alt="logo" />
+      <a href="/youtube" className={styles.logo}>
+        <img className={styles.img} src="./images/logo.png" alt="logo" />
         <h1 className={styles.title}>Youtube</h1>
       </a>
       <input
@@ -34,7 +34,7 @@ const SearchHeader = memo(({ onSearch }) => {
       <button className={styles.button} type="submit" onClick={onClick}>
         <img
           className={styles.buttonImg}
-          src="/images/search.png"
+          src="./images/search.png"
           alt="search"
         />
       </button>
